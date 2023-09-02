@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FE383B452AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B442AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift */; };
-		FE383B472AA3800800EE87A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B462AA3800800EE87A6 /* ContentView.swift */; };
+		FE383B472AA3800800EE87A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B462AA3800800EE87A6 /* MainView.swift */; };
 		FE383B492AA3800900EE87A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE383B482AA3800900EE87A6 /* Assets.xcassets */; };
 		FE383B4C2AA3800900EE87A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE383B4B2AA3800900EE87A6 /* Preview Assets.xcassets */; };
 		FE383B562AA3800900EE87A6 /* SimpleSwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B552AA3800900EE87A6 /* SimpleSwiftUIAppTests.swift */; };
 		FE383B602AA3800900EE87A6 /* SimpleSwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B5F2AA3800900EE87A6 /* SimpleSwiftUIAppUITests.swift */; };
 		FE383B622AA3800900EE87A6 /* SimpleSwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B612AA3800900EE87A6 /* SimpleSwiftUIAppUITestsLaunchTests.swift */; };
+		FE383B722AA380FE00EE87A6 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B712AA380FE00EE87A6 /* MainViewModel.swift */; };
+		FE383B742AA3810B00EE87A6 /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B732AA3810B00EE87A6 /* MainConfigurator.swift */; };
+		FE383B762AA3811500EE87A6 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE383B752AA3811500EE87A6 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		FE383B412AA3800800EE87A6 /* SimpleSwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE383B442AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIAppApp.swift; sourceTree = "<group>"; };
-		FE383B462AA3800800EE87A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FE383B462AA3800800EE87A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FE383B482AA3800900EE87A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE383B4B2AA3800900EE87A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE383B512AA3800900EE87A6 /* SimpleSwiftUIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftUIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,10 @@
 		FE383B5B2AA3800900EE87A6 /* SimpleSwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE383B5F2AA3800900EE87A6 /* SimpleSwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		FE383B612AA3800900EE87A6 /* SimpleSwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE383B712AA380FE00EE87A6 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FE383B732AA3810B00EE87A6 /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		FE383B752AA3811500EE87A6 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		FEB75FFA2AA383CB005B6B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +101,11 @@
 		FE383B432AA3800800EE87A6 /* SimpleSwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE383B442AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift */,
-				FE383B462AA3800800EE87A6 /* ContentView.swift */,
-				FE383B482AA3800900EE87A6 /* Assets.xcassets */,
+				FE383B6E2AA3807B00EE87A6 /* App */,
+				FE383B6F2AA380C100EE87A6 /* Presentation */,
+				FE383B772AA3812900EE87A6 /* Business Logic */,
+				FE383B792AA3817100EE87A6 /* Core */,
+				FE383B7A2AA381A300EE87A6 /* Resources */,
 				FE383B4A2AA3800900EE87A6 /* Preview Content */,
 			);
 			path = SimpleSwiftUIApp;
@@ -125,6 +134,64 @@
 				FE383B612AA3800900EE87A6 /* SimpleSwiftUIAppUITestsLaunchTests.swift */,
 			);
 			path = SimpleSwiftUIAppUITests;
+			sourceTree = "<group>";
+		};
+		FE383B6E2AA3807B00EE87A6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE383B442AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE383B6F2AA380C100EE87A6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FE383B702AA380D100EE87A6 /* MainView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FE383B702AA380D100EE87A6 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				FE383B462AA3800800EE87A6 /* MainView.swift */,
+				FE383B712AA380FE00EE87A6 /* MainViewModel.swift */,
+				FE383B732AA3810B00EE87A6 /* MainConfigurator.swift */,
+				FE383B752AA3811500EE87A6 /* MainRouter.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		FE383B772AA3812900EE87A6 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				FE383B782AA3813F00EE87A6 /* Models */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		FE383B782AA3813F00EE87A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE383B792AA3817100EE87A6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FE383B7A2AA381A300EE87A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE383B482AA3800900EE87A6 /* Assets.xcassets */,
+				FEB75FFA2AA383CB005B6B15 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE383B472AA3800800EE87A6 /* ContentView.swift in Sources */,
+				FE383B762AA3811500EE87A6 /* MainRouter.swift in Sources */,
+				FE383B472AA3800800EE87A6 /* MainView.swift in Sources */,
+				FE383B742AA3810B00EE87A6 /* MainConfigurator.swift in Sources */,
 				FE383B452AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift in Sources */,
+				FE383B722AA380FE00EE87A6 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -399,6 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -420,6 +492,7 @@
 				DEVELOPMENT_TEAM = Q3N89R8Y92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleSwiftUIApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +522,7 @@
 				DEVELOPMENT_TEAM = Q3N89R8Y92;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleSwiftUIApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
