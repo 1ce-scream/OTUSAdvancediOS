@@ -29,6 +29,8 @@
 		FE4300812AA4A87B0051BA66 /* AboutDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300802AA4A87B0051BA66 /* AboutDetailsConfigurator.swift */; };
 		FE4300832AA4A8AE0051BA66 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300822AA4A8AE0051BA66 /* AboutRouter.swift */; };
 		FE4300862AA4AA400051BA66 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300852AA4AA400051BA66 /* AppConstants.swift */; };
+		FE4300892AA4ADEF0051BA66 /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300882AA4ADEF0051BA66 /* FoodDetailsView.swift */; };
+		FE43008D2AA4B1E90051BA66 /* FoodDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43008C2AA4B1E90051BA66 /* FoodDetailsConfigurator.swift */; };
 		FED2BF522AA4857A001A2B5D /* MainTabbarTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF512AA4857A001A2B5D /* MainTabbarTabs.swift */; };
 		FED2BF5F2AA48EBD001A2B5D /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF5E2AA48EBD001A2B5D /* StartView.swift */; };
 		FED2BF612AA48ED2001A2B5D /* StrartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF602AA48ED2001A2B5D /* StrartConfigurator.swift */; };
@@ -77,6 +79,8 @@
 		FE4300802AA4A87B0051BA66 /* AboutDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailsConfigurator.swift; sourceTree = "<group>"; };
 		FE4300822AA4A8AE0051BA66 /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
 		FE4300852AA4AA400051BA66 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FE4300882AA4ADEF0051BA66 /* FoodDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsView.swift; sourceTree = "<group>"; };
+		FE43008C2AA4B1E90051BA66 /* FoodDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsConfigurator.swift; sourceTree = "<group>"; };
 		FEB75FFA2AA383CB005B6B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED2BF512AA4857A001A2B5D /* MainTabbarTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarTabs.swift; sourceTree = "<group>"; };
 		FED2BF5E2AA48EBD001A2B5D /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				FE383B702AA380D100EE87A6 /* MainView */,
 				FED2BF5D2AA48EA8001A2B5D /* StartView */,
 				FED2BF552AA48B5D001A2B5D /* FoodsView */,
+				FE4300872AA4ADD30051BA66 /* FoodDetailsView */,
 				FED2BF562AA48B66001A2B5D /* AboutView */,
 				FE43007B2AA4A6E30051BA66 /* AboutDetailsView */,
 			);
@@ -246,6 +251,15 @@
 				FE4300852AA4AA400051BA66 /* AppConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		FE4300872AA4ADD30051BA66 /* FoodDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				FE4300882AA4ADEF0051BA66 /* FoodDetailsView.swift */,
+				FE43008C2AA4B1E90051BA66 /* FoodDetailsConfigurator.swift */,
+			);
+			path = FoodDetailsView;
 			sourceTree = "<group>";
 		};
 		FED2BF502AA48561001A2B5D /* Enums */ = {
@@ -418,12 +432,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4300832AA4A8AE0051BA66 /* AboutRouter.swift in Sources */,
+				FE43008D2AA4B1E90051BA66 /* FoodDetailsConfigurator.swift in Sources */,
 				FE4300742AA48FC10051BA66 /* FoodsRouter.swift in Sources */,
 				FED2BF522AA4857A001A2B5D /* MainTabbarTabs.swift in Sources */,
 				FE383B762AA3811500EE87A6 /* MainRouter.swift in Sources */,
 				FE43007A2AA499EB0051BA66 /* AboutConfigurator.swift in Sources */,
 				FE383B472AA3800800EE87A6 /* MainView.swift in Sources */,
 				FE383B742AA3810B00EE87A6 /* MainConfigurator.swift in Sources */,
+				FE4300892AA4ADEF0051BA66 /* FoodDetailsView.swift in Sources */,
 				FE4300702AA48F7A0051BA66 /* FoodsViewModel.swift in Sources */,
 				FE43006E2AA48F6B0051BA66 /* FoodsView.swift in Sources */,
 				FE383B452AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift in Sources */,

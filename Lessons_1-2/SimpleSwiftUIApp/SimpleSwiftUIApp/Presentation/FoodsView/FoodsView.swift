@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FoodsView: View {
     @ObservedObject private var viewModel: FoodsViewModel
+    @State private var isShownFavouriteFood: Bool = false
+    @State private var shouldShowFoodDetails: Bool = false
     
     init(
         _ viewModel: FoodsViewModel
@@ -19,18 +21,48 @@ struct FoodsView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.foods) { food in
-                    HStack {
-                        Text(food.name)
-                        Spacer()
-                        Text(food.image)
-                            .font(.title3)
+                Section {
+                    Toggle(isOn: $isShownFavouriteFood) {
+                        Text("Show only favourites")
                     }
-                    .padding(.horizontal, AppConstants.horizontalPadding)
-                    .padding(.vertical, AppConstants.verticalPadding)
+                }
+                
+                Section {
+                    ForEach(viewModel.foods) { food in
+                        if !isShownFavouriteFood || food.isFavourite {
+                            foodRowView(food)
+                        }
+                    }
                 }
             }
+            .animation(.easeOut, value: isShownFavouriteFood)
+            .onAppear {
+                viewModel.clearSelectedFood()
+            }
             .navigationTitle(MainTabbarTabs.foodListView.localized())
+            .navigationDestination(isPresented: $shouldShowFoodDetails) {
+                FoodsRouter.destinationFoodDetails(
+                    viewModel.selectedFood ?? .fakeData()
+                )
+            }
+        }
+    }
+}
+
+private extension FoodsView {
+    private func foodRowView(_ food: FoodModel) -> some View {
+        Button {
+            viewModel.setSelectedFood(food)
+            shouldShowFoodDetails.toggle()
+        } label: {
+            HStack {
+                Text(food.name)
+                Spacer()
+                Text(food.image)
+                    .font(.title3)
+            }
+            .padding(.horizontal, AppConstants.horizontalPadding)
+            .padding(.vertical, AppConstants.verticalPadding)
         }
     }
 }
