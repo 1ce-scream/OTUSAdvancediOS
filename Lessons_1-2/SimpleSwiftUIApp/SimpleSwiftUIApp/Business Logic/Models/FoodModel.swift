@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FoodModelProtocol: Identifiable, Codable {
+fileprivate protocol FoodModelProtocol: Identifiable, Codable {
     var id: UUID { get }
     var name: String { get set }
     var image: String { get set }

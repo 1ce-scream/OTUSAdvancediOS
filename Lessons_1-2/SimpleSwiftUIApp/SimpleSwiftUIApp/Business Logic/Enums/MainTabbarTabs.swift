@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TabsProtocol: CaseIterable  {
+fileprivate protocol TabsProtocol: CaseIterable  {
     var title: String { get }
     var icon: String { get }
     func localized() -> String

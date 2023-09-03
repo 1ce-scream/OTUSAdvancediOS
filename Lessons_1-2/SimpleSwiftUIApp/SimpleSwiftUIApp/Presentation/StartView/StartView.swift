@@ -30,9 +30,10 @@ struct StartView: View {
                 } label: {
                     Text("Go to food tab")
                         .foregroundColor(.white)
-                        .padding()
+                        .padding(.horizontal, AppConstants.horizontalPadding)
+                        .padding(.vertical, AppConstants.verticalPadding)
                         .background {
-                            RoundedRectangle(cornerRadius: 16)
+                            RoundedRectangle(cornerRadius: AppConstants.cornerRadius)
                                 .fill(Color.green)
                         }
                 }

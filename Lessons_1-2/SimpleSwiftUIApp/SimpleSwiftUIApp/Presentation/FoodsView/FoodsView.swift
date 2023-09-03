@@ -26,7 +26,8 @@ struct FoodsView: View {
                         Text(food.image)
                             .font(.title3)
                     }
-                    .padding()
+                    .padding(.horizontal, AppConstants.horizontalPadding)
+                    .padding(.vertical, AppConstants.verticalPadding)
                 }
             }
             .navigationTitle(MainTabbarTabs.foodListView.localized())
