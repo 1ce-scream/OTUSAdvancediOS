@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class MainConfigurator {
+    public static func configure() -> MainView {
+        return MainView()
+    }
+}

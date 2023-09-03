@@ -11,7 +11,7 @@ import SwiftUI
 struct SimpleSwiftUIAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainConfigurator.configure()
         }
     }
 }
