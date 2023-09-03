@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct AboutView: View {
+    @State private var shouldShowDetails: Bool = false
+    
     var body: some View {
         NavigationStack {
-            Text("About authors")
-                .font(.title)
-                .navigationTitle(MainTabbarTabs.aboutView.localized())
+            Button {
+                shouldShowDetails.toggle()
+            } label: {
+                Text("Show details")
+                    .font(.headline)
+                    .foregroundColor(.black)
+                    .padding(.horizontal, AppConstants.horizontalPadding)
+                    .padding(.vertical, AppConstants.verticalPadding)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: AppConstants.cornerRadius)
+                            .stroke(Color.green, lineWidth: AppConstants.lineWidth)
+                    }
+            }
+            .sheet(isPresented: $shouldShowDetails) {
+                print("Sheet dismissed")
+            } content: {
+                AboutRouter.destinationAboutDetails()
+                    .presentationDetents([.medium, .large])
+                    .presentationCornerRadius(AppConstants.cornerRadius)
+            }
+            .navigationTitle(MainTabbarTabs.aboutView.localized())
         }
     }
 }

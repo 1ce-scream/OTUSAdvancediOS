@@ -24,6 +24,11 @@
 		FE4300762AA490450051BA66 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300752AA490450051BA66 /* FoodModel.swift */; };
 		FE4300782AA499C30051BA66 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300772AA499C30051BA66 /* AboutView.swift */; };
 		FE43007A2AA499EB0051BA66 /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300792AA499EB0051BA66 /* AboutConfigurator.swift */; };
+		FE43007D2AA4A73D0051BA66 /* ModalScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43007C2AA4A73D0051BA66 /* ModalScreens.swift */; };
+		FE43007F2AA4A8290051BA66 /* AboutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE43007E2AA4A8290051BA66 /* AboutDetailsView.swift */; };
+		FE4300812AA4A87B0051BA66 /* AboutDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300802AA4A87B0051BA66 /* AboutDetailsConfigurator.swift */; };
+		FE4300832AA4A8AE0051BA66 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300822AA4A8AE0051BA66 /* AboutRouter.swift */; };
+		FE4300862AA4AA400051BA66 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4300852AA4AA400051BA66 /* AppConstants.swift */; };
 		FED2BF522AA4857A001A2B5D /* MainTabbarTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF512AA4857A001A2B5D /* MainTabbarTabs.swift */; };
 		FED2BF5F2AA48EBD001A2B5D /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF5E2AA48EBD001A2B5D /* StartView.swift */; };
 		FED2BF612AA48ED2001A2B5D /* StrartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED2BF602AA48ED2001A2B5D /* StrartConfigurator.swift */; };
@@ -67,6 +72,11 @@
 		FE4300752AA490450051BA66 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		FE4300772AA499C30051BA66 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		FE4300792AA499EB0051BA66 /* AboutConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
+		FE43007C2AA4A73D0051BA66 /* ModalScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalScreens.swift; sourceTree = "<group>"; };
+		FE43007E2AA4A8290051BA66 /* AboutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailsView.swift; sourceTree = "<group>"; };
+		FE4300802AA4A87B0051BA66 /* AboutDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailsConfigurator.swift; sourceTree = "<group>"; };
+		FE4300822AA4A8AE0051BA66 /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		FE4300852AA4AA400051BA66 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		FEB75FFA2AA383CB005B6B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED2BF512AA4857A001A2B5D /* MainTabbarTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarTabs.swift; sourceTree = "<group>"; };
 		FED2BF5E2AA48EBD001A2B5D /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -171,6 +181,7 @@
 				FED2BF5D2AA48EA8001A2B5D /* StartView */,
 				FED2BF552AA48B5D001A2B5D /* FoodsView */,
 				FED2BF562AA48B66001A2B5D /* AboutView */,
+				FE43007B2AA4A6E30051BA66 /* AboutDetailsView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -213,16 +224,35 @@
 		FE383B7A2AA381A300EE87A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE4300842AA4AA300051BA66 /* Constants */,
 				FE383B482AA3800900EE87A6 /* Assets.xcassets */,
 				FEB75FFA2AA383CB005B6B15 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FE43007B2AA4A6E30051BA66 /* AboutDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				FE43007E2AA4A8290051BA66 /* AboutDetailsView.swift */,
+				FE4300802AA4A87B0051BA66 /* AboutDetailsConfigurator.swift */,
+			);
+			path = AboutDetailsView;
+			sourceTree = "<group>";
+		};
+		FE4300842AA4AA300051BA66 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FE4300852AA4AA400051BA66 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FED2BF502AA48561001A2B5D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				FED2BF512AA4857A001A2B5D /* MainTabbarTabs.swift */,
+				FE43007C2AA4A73D0051BA66 /* ModalScreens.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -243,6 +273,7 @@
 			children = (
 				FE4300772AA499C30051BA66 /* AboutView.swift */,
 				FE4300792AA499EB0051BA66 /* AboutConfigurator.swift */,
+				FE4300822AA4A8AE0051BA66 /* AboutRouter.swift */,
 			);
 			path = AboutView;
 			sourceTree = "<group>";
@@ -386,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4300832AA4A8AE0051BA66 /* AboutRouter.swift in Sources */,
 				FE4300742AA48FC10051BA66 /* FoodsRouter.swift in Sources */,
 				FED2BF522AA4857A001A2B5D /* MainTabbarTabs.swift in Sources */,
 				FE383B762AA3811500EE87A6 /* MainRouter.swift in Sources */,
@@ -397,10 +429,14 @@
 				FE383B452AA3800800EE87A6 /* SimpleSwiftUIAppApp.swift in Sources */,
 				FE4300782AA499C30051BA66 /* AboutView.swift in Sources */,
 				FE4300722AA48F8A0051BA66 /* FoodsConfigurator.swift in Sources */,
+				FE4300812AA4A87B0051BA66 /* AboutDetailsConfigurator.swift in Sources */,
 				FED2BF612AA48ED2001A2B5D /* StrartConfigurator.swift in Sources */,
 				FE4300762AA490450051BA66 /* FoodModel.swift in Sources */,
+				FE43007D2AA4A73D0051BA66 /* ModalScreens.swift in Sources */,
 				FE383B722AA380FE00EE87A6 /* MainViewModel.swift in Sources */,
 				FED2BF5F2AA48EBD001A2B5D /* StartView.swift in Sources */,
+				FE43007F2AA4A8290051BA66 /* AboutDetailsView.swift in Sources */,
+				FE4300862AA4AA400051BA66 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
