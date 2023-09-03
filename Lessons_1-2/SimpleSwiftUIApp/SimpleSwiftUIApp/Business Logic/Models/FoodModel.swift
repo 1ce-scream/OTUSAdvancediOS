@@ -37,4 +37,8 @@ extension FoodModel {
     static func sample(name: String, image: String, isFavourite: Bool = false) -> Self {
         return FoodModel(name: name, image: image, isFavourite: isFavourite)
     }
+    
+    static func fakeData() -> Self {
+        FoodModel(name: "Fake", image: "Fake")
+    }
 }
